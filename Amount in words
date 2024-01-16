@@ -1,0 +1,32 @@
+MAX_LINES = 3
+
+def starting_gold():
+    while True:
+        starting_balance = input("How Lucky do you feel today?")
+        if starting_balance.isdigit():
+            starting_balance = int(starting_balance)
+            if starting_balance>0:
+                break
+            else:
+                print("please enter a number greater than 0")
+        else:
+            print("Please enter a valid number")
+    return starting_balance
+
+starting_gold()
+
+def betting_lines():
+    while True:
+        number_lines = input("How many lines you wanna bet on (1-" +str(MAX_LINES)")?")
+        if number_lines.isdigit():
+            number_lines = int(starting_balance)
+            if number_lines>0:
+                break
+            else:
+                print("please enter a value greater than 0")
+        else:
+            print("Please enter a valid number")
+    return starting_balance
+
+betting_lines()
+
