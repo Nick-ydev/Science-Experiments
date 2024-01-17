@@ -4,10 +4,10 @@ token = ["R","P","S"]
 user_wins = 0
 computer_wins = 0
 #comment
-no_of_games = 0
+
 draw_index = 0
 
-while no_of_games < 6:
+while (user_wins + computer_wins + draw_index) < 6:
     computer_guess = token[random.randrange(3)]
     print(computer_guess)
     user_guess = input("Type one from Rock Paper Scissor R/P/S! ")
@@ -26,6 +26,6 @@ while no_of_games < 6:
     else:
         print("Congratzi You WIN")
         user_wins += 1
-    no_of_games += 1
+    
 
-print("No. of matches",no_of_games,"Draws:", draw_index,"Computer wins:", computer_wins, "User wins:" ,user_wins)
+print("No. of matches",(user_wins + computer_wins + draw_index),"Draws:", draw_index,"Computer wins:", computer_wins, "User wins:" ,user_wins)
