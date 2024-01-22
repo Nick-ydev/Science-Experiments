@@ -26,6 +26,6 @@ while (user_wins + computer_wins + draw_index) < 6:
     else:
         print("Congratzi You WIN")
         user_wins += 1
-    
+
 
 print("No. of matches",(user_wins + computer_wins + draw_index),"Draws:", draw_index,"Computer wins:", computer_wins, "User wins:" ,user_wins)
