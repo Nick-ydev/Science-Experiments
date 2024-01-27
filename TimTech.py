@@ -7,10 +7,17 @@ computer_wins = 0
 
 draw_index = 0
 
-while (user_wins + computer_wins + draw_index) < 6:
+while True:
+    if computer_wins == 5 :
+        print ("CPU wins")
+        break
+    elif user_wins == 5 :
+        print ("You win")
+        break
+
     computer_guess = token[random.randrange(3)]
-    print(computer_guess)
-    user_guess = input("Type one from Rock Paper Scissor R/P/S! ")
+    # print(computer_guess)
+    user_guess = input("Type one from Rock Paper Scissor R/P/S! First to 5 wins ")
     if user_guess == "R" and computer_guess == "P":
         print("Computer selected",computer_guess, "CPU wins")
         computer_wins += 1
@@ -23,6 +30,8 @@ while (user_wins + computer_wins + draw_index) < 6:
     elif user_guess == computer_guess:
         draw_index += 1
         print ("Match Draw")
+    elif user_guess != 'R' or user_guess!= 'P' or user_guess!= 'S':
+        print("please enter a valid option from R/P/S")
     else:
         print("Congratzi You WIN")
         user_wins += 1
