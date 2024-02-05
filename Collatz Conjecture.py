@@ -1,5 +1,5 @@
 import math
-'''
+
 number = 2
 
 remainder = number % 2
@@ -15,13 +15,3 @@ while number > 1:
     iterations += 1
 
 print("No. of Iterations =", iterations)
-'''
-months_list = ['Apr 1', 'Aug 13','Jan 28', 'Aug 13', 'Jan 3', 'Jul 1', 'Nov 27', 'Mar 4', 'Jul 1']
-matching_birthday = 0
-
-for i in range (0,len((months_list))):
-    for months_list[i] in months_list[i+1]:
-        print(months_list[i])
-        matching_birthday +=1
-
-print(matching_birthday)
