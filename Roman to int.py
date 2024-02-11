@@ -19,7 +19,7 @@ thisdict = {
   "D": 500,
   "M": 1000
 }
-
+#project abandoned midway due to manual labour
 for i in range (0,length_r):
     if r[i] == "I" and (i+1)< length_r and r[i+1] == "V":
         integer_r = integer_r + (thisdict["V"] - thisdict["I"])
