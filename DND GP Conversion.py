@@ -39,7 +39,6 @@ for i in range(len(Final_conv_gold)): #(0,4)
         if Final_conv_gold[i+1] < 0:
             Final_conv_gold[i-1] = Final_conv_gold[i-1] -10
             print(Final_conv_gold)
-            
 
 
-print(2 ** 16)
+#program converts Everything into gold and gives as output, not ideal for real case scenarios, needs updation.
