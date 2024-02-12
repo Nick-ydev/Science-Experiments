@@ -22,7 +22,6 @@ def birthday_generator(no_of_birthdays):
 
 print(birthday_generator(no_of_birthdays))
 
-
 def duplicate_checker():
     matching_birthday = 0
     count_duplicates = 0
