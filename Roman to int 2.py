@@ -1,5 +1,5 @@
 
-r = "IV"
+r = "XIV"
 length_r = len(r)
 integer_r = 0
 
@@ -14,9 +14,11 @@ position_C= roman_list.index('C')
 position_D= roman_list.index('D')
 position_M= roman_list.index('M')
 
+
 for i in range(0, len(r)):
     if r[i] in roman_list:
         posi = roman_list.index(r[i])
     integer_r += roman_dict[r[i]]
     #print(integer_r)
     print(posi)
+
