@@ -1,5 +1,5 @@
 import re
-
+'''
 picnic_items = {"Sandwiches" : 10,"Napkins" : 20,"Apples" : 7,"Rasna" : "5L"}
 add_items = "Y"
 while add_items == "Y":
@@ -16,11 +16,24 @@ while add_items == "Y":
     add_items = input("Picnic list updated \nWould you like to add more items? (Y/N)")
 
 
-
 def print_picnic(items_dict,left_width,right_width):
     print("PICNIC ITEMS".center(left_width + right_width , "_"))
     for k,v in items_dict.items():
         print(k.ljust(left_width,"*") + str(v).rjust(right_width,"-"))
 
 print_picnic(picnic_items,10,5)
+'''
 
+table_list = [["apples","oranges","cherries","banana"],["paper","Rock","Scissssors","lizard","spock"]]
+max_lenght = 0
+print(len(table_list))
+
+for i in range(len(table_list)):
+    lenght =len(table_list[i])
+    name_obj = table_list[i]
+    if lenght > max_lenght:
+        max_lenght = lenght
+
+print(max_lenght)
+#for k in table_list:
+#    print(k.rjust(max_lenght," "))
