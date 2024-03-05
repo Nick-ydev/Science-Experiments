@@ -24,16 +24,27 @@ def print_picnic(items_dict,left_width,right_width):
 print_picnic(picnic_items,10,5)
 '''
 
-table_list = [["apples","oranges","cherries","banana"],["paper","Rock","Scissssors","lizard","spock"]]
+table_input = [["apples","oranges","cherries","banana"],["paper","Rock","Scissssors","lizard","spock"]]
 max_lenght = 0
-print(len(table_list))
+print(table_input[0][1])
 
-for i in range(len(table_list)):
-    lenght =len(table_list[i])
-    name_obj = table_list[i]
-    if lenght > max_lenght:
-        max_lenght = lenght
+def max_lenght_finder(table_list,max_lenght):
+    for i in range(len(table_list)):
+        for k in range(len(table_list[i])):
+            lenght =len(table_list[i][k])
+            name_obj = table_list[i][k]
+            #print(name_obj)
+            if lenght > max_lenght:
+                max_lenght = lenght
+    return max_lenght
 
-print(max_lenght)
+print(max_lenght_finder(table_input,max_lenght))
+
+for i in range(len(table_input)):
+    for k in range(len(table_input[i])):
+        lenght =len(table_input[i][k])
+        name_obj = table_input[i][k]
+        print(table_input[i][k].rjust(max_lenght_finder(table_input,max_lenght),"*"))
+
 #for k in table_list:
-#    print(k.rjust(max_lenght," "))
+#    print(k.rjust(max_lenght," ")) print(table_list[i][k].rjust(max_lenght,"*"))
