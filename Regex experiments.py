@@ -44,7 +44,7 @@ print(max_lenght_finder(table_input,max_lenght))
 
 for i,v in enumerate(table_input):
     for j,v2 in enumerate(v):
-        print(i,j)
+        print(i,j,v2)
 
 # for i in range(len(table_input)):
 #     for k in range(len(table_input[i])):
