@@ -25,12 +25,13 @@ print_picnic(picnic_items,10,5)
 '''
 
 table_input = [["apples","oranges","cherries","banana"],
-               ["paper","Rock","Scissssors","lizard","spock"]]
+               ["paper","Rock","Scissssors","spock"]]
 
-max_lenght = 0
+
 print(table_input[0][1])
-
-def max_lenght_finder(table_list,max_lenght):
+ 
+def max_lenght_finder(table_list):
+    max_lenght = 0
     for i in range(len(table_list)):
         for k in range(len(table_list[i])):
             lenght =len(table_list[i][k])
@@ -40,12 +41,22 @@ def max_lenght_finder(table_list,max_lenght):
                 max_lenght = lenght
     return max_lenght
 
-print(max_lenght_finder(table_input,max_lenght))
+MAX_LENGHT = max_lenght_finder(table_input)
+print(MAX_LENGHT)
+col_width = [0] * len(table_input)
+print(col_width)
 
+# This prints Indexes of all values in the list of lists (input)
+xyz = 0
+abc = 0
 for i,v in enumerate(table_input):
+    abc +=1
     for j,v2 in enumerate(v):
         print(i,j,v2)
+        xyz += 1
 
+print(xyz,abc)
+#This is printing the list with list values rjust-ified 
 # for i in range(len(table_input)):
 #     for k in range(len(table_input[i])):
 #         lenght =len(table_input[i][k])
