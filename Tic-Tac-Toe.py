@@ -15,7 +15,13 @@ def printBoard(board):
     print('-+-+-')
     print(board['low-L'] + '|' + board['low-M'] + '|' + board['low-R'])
 
+string_in = "My name is Anthony Gonsalves"
 
+for i in range(len(string_in)):
+    chunk = string_in[i:i+4]
+    print(chunk)
+
+'''
 turn = 'X'
 for i in range (9):
     printBoard(theboard)
@@ -25,3 +31,4 @@ for i in range (9):
     if turn == "X":
         turn = "O"
     else: turn = "X"
+'''
