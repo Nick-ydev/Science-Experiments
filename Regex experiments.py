@@ -14,5 +14,12 @@ print('Phone number found: ' + mo.group())
 
 sample_array = re.compile(r'ab+(ab)+a')
 
+# For a sample of 
+# abababababababab
+# abbbbbbbb
+# aaaaaa bbbbbbbbbbb
+# abbbababa, abababa, abbababa 
+# abbbbababa 
+# aababa
 sample = sample_array.search("abbabbaba ")
 print(sample.group())
