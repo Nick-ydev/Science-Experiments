@@ -1,6 +1,6 @@
 import re
 
-phoneNumberregex = re.compile(r'/+?/d/d-/d{10}')
+phoneNumberregex = re.compile(r'\+\d\d-\d{10}')
 # re.compile Defines the type of string we want to look for
 
 mo = phoneNumberregex.search('My Number is +91-9769218137.')
@@ -11,3 +11,8 @@ mo = phoneNumberregex.search('My Number is +91-9769218137.')
 print('Phone number found: ' + mo.group())
 #The mo variable name is just a generic name to use for match objects.
 #group - returns the chunk of string that matched the initial regex pattern
+
+sample_array = re.compile(r'ab+(ab)+a')
+
+sample = sample_array.search("abbabbaba ")
+print(sample.group())
