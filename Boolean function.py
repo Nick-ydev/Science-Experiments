@@ -1,5 +1,5 @@
 
-x = str(8238)
+x = str(87878)
 y = len(str(x))
 
 # Units = ( x % 10**(y-2))
@@ -34,10 +34,15 @@ list_x = []
 #             print ("It a palindrome!")
 #             num_flag = False
 #             break
-reverse_x = " "
-for i in range(y-1,0,-1):
+reverse_x = ""
+for i in range(y-1,-1,-1):
     reverse_x = reverse_x + x[i]
+    palindrome_x = int(reverse_x)
     print(reverse_x)
+
+if reverse_x == x:
+    print("It is a palindrome")
+else: print("it is not a palindrome")
 
 print (list_x)
 
