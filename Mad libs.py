@@ -16,7 +16,7 @@ from math import *
 
 # print (friends[-1])
 
-Num_pali = "-10"
+Num_pali = "-101"
 mid = ceil(len(Num_pali)/2)
 #mid = (len(Num_pali) // 2) if len(Num_pali) % 2 ==0 else (len(Num_pali)//2) +1
 print (mid)
@@ -29,7 +29,7 @@ for i in range (0,mid):
         print ("It is not a palindrome!")
         num_flag = True
         break
-    
+
 if not num_flag:
     print ("It is a palindrome!")
 
