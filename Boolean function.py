@@ -1,5 +1,5 @@
 
-x = str(87878)
+x = 87878
 y = len(str(x))
 
 # Units = ( x % 10**(y-2))
@@ -14,7 +14,7 @@ y = len(str(x))
 #print (f"{Units},{tens},{Hundreds}")
 
 mid = y // 2
-print(mid)
+#print(mid)
 num_flag = True
 list_x = []
 # for i in range (1,y+1):
@@ -34,17 +34,39 @@ list_x = []
 #             print ("It a palindrome!")
 #             num_flag = False
 #             break
-reverse_x = ""
-for i in range(y-1,-1,-1):
-    reverse_x = reverse_x + x[i]
-    palindrome_x = int(reverse_x)
-    print(reverse_x)
 
-if reverse_x == x:
-    print("It is a palindrome")
-else: print("it is not a palindrome")
+# REVERSING THE INPUT BY CONVERTING IT TO STRING AND APPENDING
+# reverse_x = ""
+# for i in range(y-1,-1,-1):
+#     reverse_x = reverse_x + x[i]
+#     palindrome_x = int(reverse_x)
+#     print(reverse_x)
 
-print (list_x)
+# if reverse_x == x:
+#     print("It is a palindrome")
+# else: print("it is not a palindrome")
 
-# print (f"{new_hundreds},{new_Tens},{new_units}")
+# print (list_x)
 
+#ATTEMPT AT PALINDROME WITHOUT CHANGFING int TO str
+floored_quotient = 0
+remainder_raised = 0
+for i in range(0,y):
+    if i == 0:
+        remainder = x % 10
+        floored_quotient = x // 10
+        remainder_raised = remainder_raised + remainder * (10 ** (y-i-1))
+        print(remainder)
+        print("1ndrr",remainder_raised)
+    else:
+        remainder = floored_quotient % 10
+        print("2nd",remainder)
+        remainder_raised = remainder_raised + remainder * (10 ** (y-i-1))
+        print("2ndrr",remainder_raised)
+        floored_quotient = floored_quotient // 10
+        print(floored_quotient)
+
+
+if x == remainder_raised:
+    print("It is a palindrome!")
+else: print("It is not a Palindrome :/")
