@@ -17,8 +17,7 @@ while first_element[i] == second_element[i]:
     element = first_element[i]
     print (f'element in {i}:{element} ')
     i = i+1
-print(k) 
-
+print(k)
 
 # friends = ["Pro", "Proteur", "Proob", "Prow"]
 
