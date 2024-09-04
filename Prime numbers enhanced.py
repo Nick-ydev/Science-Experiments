@@ -1,18 +1,17 @@
 import math
 
-n = 100
+n = 1196
 
 #list of numbers
-Number_list = []
-for i in range (2,n+1):
-    Number_list.append(i)
+Number_list = range[2,n+1]
+
 print("List of Numbers" , Number_list)
 
 def prime_calc(n,list_of_numbers):
     for i in range (2,int(n/2)):
         print("This is i" ,i)
         k = n // i
-        for j in range (k,1,-1):
+        for j in range (k,i,-1):
             print("This is j" ,j)
             Multiple = i * j
             print(Multiple)
