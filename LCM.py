@@ -3,7 +3,7 @@ import math
 list_of_primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
 
 Num_1 = 44
-Num_2 = 22
+Num_2 = 36
 
 def factors(Num,list_of_primes): #This gives out prime factors of numbers
     Num_1factors = []
@@ -28,10 +28,11 @@ def LCM_factors(Num_1factors,Num_2factors):
             LCM_list.append(Num_1factors[i])
             continue
         if Num_1factors[i] in Num_2factors:
+            #checks count of prime number in both lists
             c1 = Num_1factors.count(Num_1factors[i])
             c2 = Num_2factors.count(Num_1factors[i])
             print(c1,c2)
-            if c1 == c2:
+            if c1 == c2: #if equal 
                 for x in range(0,c1):
                     LCM_list.append(Num_1factors[i])
                     x += 1
@@ -63,14 +64,14 @@ else: #If neither are prime then call comparison for both numbers
 
 print(Num_1fact , "2nd", Num_2fact)
 LCM_list = LCM_factors(Num_1fact,Num_2fact)
-print(LCM_list, "L1")
+print(LCM_list, "L1 OG")
 
 LCM_reverse = LCM_factors(Num_2fact,Num_1fact)
 print(LCM_reverse)
 
 #joins the 2 lists
 LCM_list.extend(LCM_reverse)
-print(LCM_list, "L1")
+print(LCM_list, "L1 extd")
 
 LCM = 1
 for i in range (0,len(LCM_list)):

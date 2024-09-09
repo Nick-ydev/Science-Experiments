@@ -1,6 +1,6 @@
 
-nums1 = [1,4,6,9]
-nums2 = [3,7,2,9]
+nums1 = [1,3]
+nums2 = [2]
 
 nums1.extend(nums2)
 print(nums1)
