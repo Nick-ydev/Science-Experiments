@@ -1,16 +1,16 @@
-num1 = [1,9,4,7,9,0,9]
-num2 = [9,9,0,9]
+l1 = [1,9,4,7,9,0,9]
+l2 = [9,9,0,9]
 
 #Equate both strings by adding 0
-if len(num1) != len(num2):
-    if len(num1) > len(num2):
-        while len(num1) != len(num2):
-            num2.append(0)
-    elif len(num1) < len(num2):
-        while len(num1) != len(num2):
-            num1.append(0)
+if len(l1) != len(l2):
+    if len(l1) > len(l2):
+        while len(l1) != len(l2):
+            l2.append(0)
+    elif len(l1) < len(l2):
+        while len(l1) != len(l2):
+            l1.append(0)
 
-print(num1,num2,"equal lenght")
+print(l1,l2,"equal lenght")
 
 #list ko string banao
 def list_to_string(list1):
@@ -20,11 +20,11 @@ def list_to_string(list1):
     
     return int(stringed_list)
 
-print(list_to_string(num1))
+print(list_to_string(l1))
 
 #call function to 
-num1_asint = list_to_string(num1)
-num2_asint = list_to_string(num2)
+num1_asint = list_to_string(l1)
+num2_asint = list_to_string(l2)
 
 output_int = str(num1_asint + num2_asint)
 print(output_int)

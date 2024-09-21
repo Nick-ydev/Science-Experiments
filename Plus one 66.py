@@ -1,6 +1,7 @@
 digits = [1,2,3]
 #output = [1,2,4]
 
+#convert list to int/string
 def list_to_string(list1):
     stringed_list = ''
     for i in range (0,len(list1)):
