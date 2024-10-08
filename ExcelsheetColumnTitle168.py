@@ -3,19 +3,16 @@ alphabet_dict = {1:"A",2:"B",3:"C",4:"D",5:"E",6:"F",7:"G",8:"H",
                  9:"I",10:"J",11:"K",12:"L",13:"M",14:"N",15:"O",16:"P",
                  17:"Q",18:"R",19:"S",20:"T",21:"U",22:"V",23:"W",24:"X",25:"Y",0:"Z",}
 
-col_num = 703
+columnNumber = 52
 col_name = ""
 
-quotient = col_num // 26
-remainder = col_num % 26
-
-if quotient < 26:
-    col_name = alphabet_dict[quotient]
+while columnNumber != 0:
+     
+    remainder = columnNumber % 26
+    col_name = alphabet_dict[remainder] + col_name
+    columnNumber = columnNumber // 26
     print(col_name,"1")
-    col_name = col_name + alphabet_dict[remainder]
-else:
-    new_quo = quotient // 26
-    col_name = alphabet_dict[new_quo]
-    col_name = col_name + alphabet_dict[remainder]
+    if remainder == 0:
+        col_name = col_name + "Z"
 
 print(col_name)
