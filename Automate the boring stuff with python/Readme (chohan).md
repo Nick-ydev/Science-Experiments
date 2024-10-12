@@ -11,3 +11,6 @@ Game description
 4.  Define player 2 stats
 5.  Function to determine win/loss
 6.  Call the function for each player and return the remaining pot.
+
+New skills aquired:
+Defining Function.
