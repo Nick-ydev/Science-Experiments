@@ -36,7 +36,7 @@ while no_of_guesses < max_guesses:
         print ("Fermi " * fermi_count)
     else:
         print ("bagels")
-        
+
     no_of_guesses += 1
 
 print ("Computer guess was " ,computer_guess) 
