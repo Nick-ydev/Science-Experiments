@@ -1,14 +1,18 @@
 import math
 
-n = 1196
-
-#list of numbers
-Number_list = range[2,n+1]
+n = 150
+Number_list = []
+#list of numbers\
+for i in range(3,n+1,2): #2++ eliminates all multiples of 2
+    Number_list.append(i)
 
 print("List of Numbers" , Number_list)
 
-def prime_calc(n,list_of_numbers):
-    for i in range (2,int(n/2)):
+upper_bound = int(n/2)
+
+def prime_calc(n,list_of_numbers,i_ka_upperbound):
+    
+    for i in range (2,i_ka_upperbound):
         print("This is i" ,i)
         k = n // i
         for j in range (k,i,-1):
@@ -23,10 +27,21 @@ def prime_calc(n,list_of_numbers):
         #     return list_of_numbers
         # else: 
         #     i += 1
+    return Number_list
 
 
-primes_list = prime_calc(n,Number_list)
+primes_list = prime_calc(n,Number_list,upper_bound)
+
+upper_bound = int(round(math.sqrt(n)))
+
+primes_list_2 = prime_calc(n,Number_list,upper_bound)
+
+if primes_list == primes_list_2:
+    print("FUCK YEAHHHHHHHHHH!!!!!!!!!!!")
+else:
+    print("false")
 print("1st call" , primes_list)
+print("2nd",primes_list_2)
 
 # prime_bound = 2 * math.floor(math.sqrt(n))
 # print("upper bound" ,prime_bound)
