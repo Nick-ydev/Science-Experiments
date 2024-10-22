@@ -12,16 +12,15 @@ computer_guess = str(random.randrange(lower_bound,(upper_bound +1))) #computer g
 
 #print (computer_guess) #for checking
 no_of_guesses = 0
- 
+
 while no_of_guesses < max_guesses:
     fermi_count = 0
     pico_count = 0
     bagels_count = 0
     user_guess = str(input("Guess the number?"))
-    if len(user_guess) != no_of_digits: #Dad tried to enter 4 digits and the code ran hence added an exception
+    if len(user_guess) != no_of_digits or not user_guess.isnumeric(): #Dad tried to enter 4 digits and the code ran hence added an exception
         #Also he wanted to know how many guesses were remaining, so made changes
-        print("Kindly enter number within range specified," "\nYou have ", (max_guesses - no_of_guesses),"guesses remaining")
-        no_of_guesses = 0
+        print("Kindly enter proper number OR within range specified," "\nYou have ", (max_guesses - no_of_guesses),"guesses remaining")
         continue
     if user_guess == computer_guess:
         print ("You Won")
@@ -32,7 +31,7 @@ while no_of_guesses < max_guesses:
             fermi_count += 1
         elif user_guess[i] in computer_guess:
             pico_count += 1
-        
+    no_of_guesses += 1
     if fermi_count > 0 and pico_count > 0: #To print Fermi and Pico at the same time
         print("Fermi " * fermi_count ,"Pico " * pico_count ,"\nYou have ", (max_guesses - no_of_guesses),"guesses remaining") #string multiplication
     elif pico_count > 0: 
@@ -42,7 +41,7 @@ while no_of_guesses < max_guesses:
     else:
         print ("bagels","\nYou have ", (max_guesses - no_of_guesses),"guesses remaining")
 
-    no_of_guesses += 1
+    
 
 print ("Computer guess was " ,computer_guess) 
 
