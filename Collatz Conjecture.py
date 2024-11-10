@@ -1,7 +1,7 @@
-import math
+import random
 
-number = 28
-
+number = random.randrange(1000,100000)
+print("The Number is" , number)
 remainder = number % 2
 
 iterations = 0
