@@ -34,6 +34,6 @@ S	|S
 R	|S	|Win,User wins += 1
 P	|R		
 S	|P		
-For all else	|Loss	Computer wins += 1
+For all else	|Loss	|Computer wins += 1
 
 Finally print all outcomes, User wins = X, Comp wins = Y, draws = Z.
