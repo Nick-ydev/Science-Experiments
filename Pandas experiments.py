@@ -30,17 +30,17 @@ for i in range(0,final_iterations):
     iteration_list.append(i)
     print("The Number is" , number)
 
-iteration_list_numpy = np.array(iteration_list)
-number_track_numpy = np.array(number_track)
+# iteration_list_numpy = np.array(iteration_list)
+# number_track_numpy = np.array(number_track)
 
 print("No. of Iterations =", start_iterations)
 data = {
-  "iterations": iteration_list_numpy,
-  "number": number_track_numpy
+  "iterations": iteration_list,
+  "number": number_track
 }
 
 #load data into a DataFrame object:
-df = pd.DataFrame(data, index= (iteration_list_numpy))
+df = pd.DataFrame(data, index = (iteration_list))
 
 # saving the dataframe and exporting in CSV
 #df.to_csv(r'D:\Power BI thing\file3.csv')

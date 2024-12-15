@@ -3,9 +3,10 @@ import random
 lower_bound = 3
 upper_bound = 6
 final_iteration = 0
-    
 
-def collatz_sequence (number,start_iterations):
+
+def collatz_sequence (number,start_iterations,final_iteration):
+    
     while number > 1:
         if (number % 2) == 0:
             number /= 2
@@ -25,7 +26,7 @@ for i in range(lower_bound, upper_bound):
     number = i #random.randrange(1000,100000)
     print("The Number is" , number)
     start_iterations = 0
-    print(collatz_sequence(number,start_iterations))
+    collatz_sequence(number,0)
 
 
 
