@@ -27,7 +27,7 @@ class my_strategy:
 
     def show_strat_output(self):
         return self.gold
- 
+
 
 
 gold = []

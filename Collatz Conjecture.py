@@ -28,5 +28,3 @@ for i in range(lower_bound, upper_bound):
     start_iterations = 0
     collatz_sequence(number,0)
 
-
-
