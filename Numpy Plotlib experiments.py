@@ -6,7 +6,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
-
 # plotting the time series data to visualize the trends or patterns
 #plt.fig(figsize=(10, 6))
 
@@ -15,7 +14,6 @@ data = pd.read_csv('D:\Power BI thing\Forage Data sets\JPMC Data analyst\At_Gas.
 data['Dates'] = pd.to_datetime(data['Dates'])
 data['Dates'] = data['Dates'].map(pd.Timestamp.toordinal)
 print(data)
-
 
 data.info()
 
@@ -53,7 +51,6 @@ plt.legend()
 # Saving the plot as an image
 plt.savefig('actual_vs_predicted.png')
 plt.show()
-
 
 #plt.scatter(data.Dates , data.Prices)
 
