@@ -6,7 +6,7 @@ months_dict = {"Jan":31 ,"Feb":29,"Mar":31,"Apr":30,"May":31,"Jun":30,"Jul":31,"
 
 months_list = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec",]
 #made list for all months to call dictionary object
-no_of_birthdays = 34
+no_of_birthdays = 30
 
 def birthday_generator(no_of_birthdays):
     month_generated_list = []

@@ -9,6 +9,7 @@ print("upper limit =" + str(upper_bound)) # int(('1' + '0' * no_of_digits)) -1
 #units_place = str(random.randrange(0,10)) #tried to pick a repititive digit number
 #computer_guess = units_place * no_of_digits
 computer_guess = str(random.randrange(lower_bound,(upper_bound +1))) #computer guess converted to string
+print("Computer guess is " + computer_guess)
 
 #print (computer_guess) #for checking
 no_of_guesses = 0

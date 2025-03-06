@@ -19,5 +19,5 @@ age_avg = np.mean(data[:, 0])  # Column 0 (Age)
 salary_avg = np.mean(data[:, 1])  # Column 1 (Salary)
 
 # Display the results
-print(Average Age: {age_avg:.2f})
-print(Average Salary: {salary_avg:.2f})
+print("Average Age: {age_avg:.2f}")
+print("Average Salary: {salary_avg:.2f}")
