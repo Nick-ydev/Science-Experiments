@@ -13,8 +13,14 @@ duplicatesValues = happiness_data.duplicated()
 print(duplicatesValues.sum())
 happiness_data[duplicatesValues]
 
+#Normalizing and Scaling
 from sklearn.preprocessing import StandardScaler
 stdScale = StandardScaler()
 stdScale
 happiness_data['Happiness Score'] = stdScale.fit_transform(happiness_data[['Happiness Score']])
 happiness_data.head()
+
+#Correlation
+sns_plot = sns.heatmap(happiness_data.corr(),annot=True,cmap='RdYlGn')
+
+print(sns_plot)
