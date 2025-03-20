@@ -14,6 +14,7 @@ with open('D:\Power BI thing\Forage Data sets\JPMC Data analyst\At_Gas.csv', 'r'
     next(reader)  # Skip the header row
     data = np.array(list(reader), dtype=int)
 
+
 # Calculate column averages
 age_avg = np.mean(data[:, 0])  # Column 0 (Age)
 salary_avg = np.mean(data[:, 1])  # Column 1 (Salary)
